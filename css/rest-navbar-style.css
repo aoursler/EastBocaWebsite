@@ -1,13 +1,9 @@
-html {
-  font-family: "Roboto", sans-serif;
-  background-color: rgb(223, 186, 86);
-  color: white;
-}
 .navBar-container{
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 .navBar {
   background-color: rgba(10, 10, 10, .85);
@@ -25,11 +21,17 @@ html {
   font-size: 11px;
   text-align: center;
   color: white;
-  transition: all .5s; 
+  transition: all .5s;
 }
 .navBar > ul > li:hover{
    background-color: rgba(255, 255, 255, .18);
 }
+
+.navBar > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .navBar-hr {
   display: none;
 }
@@ -39,4 +41,9 @@ html {
   display: inline-block;
   font-size: 24px;
   font-weight: 100;
+}
+
+.navBar > .home-link > a {
+  text-decoration: none;
+  color: inherit;
 }

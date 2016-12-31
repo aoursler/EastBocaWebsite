@@ -1,13 +1,10 @@
-html {
-  font-family: "Roboto", sans-serif;
-  background: url("http://www.resortcollection.com/wp-content/themes/resortcollection/property-images/summit/summit-beach-resort-panama-city-beach-fl-beach-01.jpg"); 
-}
 .navBar-container{
   text-align: center;
   width: 100%;
   position: absolute;
   top:0;
   left:0;
+  z-index: 1;
 }
 .navBar {
   display: inline-block;
@@ -23,17 +20,30 @@ html {
   font-size: 11px;
   text-align: center;
   color: white;
-  transition: all .5s; 
+  transition: all .5s;
 }
+
 .navBar > ul > li:hover{
    background-color: rgba(255, 255, 255, .18);
 }
+
+.navBar > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .navBar-hr {
   height: 1px;
   background-color: rgba(255, 255, 255, .3);
   width: calc(100%-50px);
   margin: 0 25px;
 }
+
 .navBar > .home-link{
   display: none;
+}
+
+.navBar > .home-link > a {
+  text-decoration: none;
+  color: inherit;
 }
