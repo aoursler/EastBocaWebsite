@@ -1,7 +1,11 @@
 html {
   font-family: "Roboto", sans-serif;
   color: white;
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
+body { margin: 0; padding: 0; }
 
 .content-container {
   position: absolute;
