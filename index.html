@@ -5,17 +5,17 @@
     <title>East Boca Dermatology</title>
     <link rel='stylesheet' href='css/common-style.css'>
     <link rel='stylesheet' href='css/header-style.css'>
-    <link rel='stylesheet' href='css/rest-navbar-style.css'>
+    <!--link rel='stylesheet' href='css/rest-navbar-style.css'-->
     <!-- TODO: Rewrite the navbar css to work either way. -->
-    <!--link rel='stylesheet' href='css/navbar-style.css'-->
+    <link rel='stylesheet' href='css/navbar-style.css'>
     <link rel="stylesheet" href="css/section-style.css">
     <link rel="stylesheet" href="css/map-style.css">
+    <link rel="stylesheet" href="css/footer-style.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,700,900' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.1.1.js" type="text/javascript"></script>
   </head>
 
   <body>
-    <!-- TODO: There's still some sort of margin at the top. -->
     <div class = 'navBar-container'>
       <div class = 'navBar'>
         <div class = 'home-link'><a href='#home'>Integrated Dermatology of East Boca</a></div>
@@ -39,6 +39,8 @@
           <h2>Judith Redd M.D.</h2>
         </div>
       </div>
+      <!-- TODO: Duplicate Section with new css to make reverse -->
+      <!-- TODO: Add ability to have new colors and styles to the sections -->
       <div class='section' id='a-nudge-for-us'>
         <div class='container'>
           <div class='accent-circle'>
@@ -60,22 +62,38 @@
           </div>
         </div>
       </div>
-      <!-- TODO: Disable scrolling with https://github.com/kylelam/kylelam.github.io/blob/master/iframe.html-->
-      <iframe class="map" id='contact-us' width="600" height="450" frameborder="0" style="border:0"
+      <div id="map-container" class="map-container">
+      <iframe class="map" id='map' width="600" height="450" frameborder="0" style="border:0"
   src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ_TA9UQYe2YgRq7M-Y1Jw0Mk&key=AIzaSyAAhxpCGLBfRu9Pu4ubYsb2ODhE0_p8QYI" allowfullscreen></iframe>
+      </div>
+      <div class="footer">
+        &copy 2016 Integrated Dermatology of East Boca
+      </div>
     </div>
   <script>
-    // TODO: use jquery .ready
+    // Turn Off Map Responses
+    // https://github.com/kylelam/kylelam.github.io/blob/master/iframe.html
+    $(document).ready(function () {
+      $('#map').addClass('scrolloff');               // set the mouse events to none by default
+        
+      $('#map-container').on("mousedown",function(){ // mouse is clicked, allow mouse events
+        $('#map').removeClass('scrolloff');
+      });
+      $("#map").mouseleave(function () {             // lock the mouse when it leaves the map
+        $('#map').addClass('scrolloff');                                  
+      });  
+    });
+
+    // Smooth Scrolling of links
+    // https://www.creativejuiz.fr/blog/tutoriels/jquery-effet-smooth-scroll-defilement-fluide
     window.onload = function() {
-      $('a[href^="#"]').click(function(){
-
-    var the_id = $(this).attr("href");
-
-        $('html, body').animate({
-            scrollTop:$(the_id).offset().top
-        }, 'slow');
-
-    return false;});
+      $('a[href^="#"]').click(function(){   // when a link is clicked
+        var the_id = $(this).attr("href");
+        $('html, body').animate({           // go to its id
+          scrollTop:$(the_id).offset().top
+        }, 'slow');                         // slowly
+        return false;
+      });
     };
   </script>
   </body>

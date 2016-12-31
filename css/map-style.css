@@ -1,5 +1,9 @@
+.map-container{
+	width: 100%;
+}
 .map{
   width: 100%;
-  position: absolute;
-  left: 0;
+}
+.scrolloff {
+	pointer-events: none;
 }

@@ -3,7 +3,10 @@
   text-align: center;
   width: 100%;
   background-image: url("http://www.resortcollection.com/wp-content/themes/resortcollection/property-images/summit/summit-beach-resort-panama-city-beach-fl-beach-01.jpg");
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header > .title-card {
