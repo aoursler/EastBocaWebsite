@@ -118,42 +118,42 @@ button {
     margin: 0;
 }
 
-.section.blue1 > .container > .content > .action-panel > button {
+.section.blue1 > .container > .content > .action-panel > a >  button {
   background-color: #96C3D9; /* blue1 */
 }
-.section.blue1 > .container > .content > .action-panel > button:hover {
+.section.blue1 > .container > .content > .action-panel > a > button:hover {
   color: white;
   background: #D2E5EF; /* blue1 4 shades lighter*/
 }
 
-.section.blue2 > .container > .content > .action-panel > button {
+.section.blue2 > .container > .content > .action-panel > a > button {
   background-color: #018BCE; /* blue2 */
 }
-.section.blue2 > .container > .content > .action-panel > button:hover {
+.section.blue2 > .container > .content > .action-panel > a > button:hover {
    color: white;
    background: #71CFFE; /* blue2 8 shades lighter*/
 }
 
-.section.blue3 > .container > .content > .action-panel > button {
+.section.blue3 > .container > .content > .action-panel > a > button {
   background-color: #C9EDFF; /* blue3 */
 }
-.section.blue3 > .container > .content > .action-panel > button:hover {
+.section.blue3 > .container > .content > .action-panel > a > button:hover {
    color: white;
    background: #EBF8FF; /* blue3 2 shades lighter */
 }
 
-.section.orange1 > .container > .content > .action-panel > button {
+.section.orange1 > .container > .content > .action-panel > a > button {
   background-color: #B0742B; /* orange1 */
 }
-.section.orange1 > .container > .content > .action-panel > button:hover {
+.section.orange1 > .container > .content > .action-panel > a > button:hover {
    color: white;
    background: #E7C69C; /* orange1  8 shades lighter*/
 }
 
-.section.orange2 > .container > .content > .action-panel > button {
+.section.orange2 > .container > .content > .action-panel > a > button {
   background-color: #FFB255; /* orange2 */
 }
-.section.orange2 > .container > .content > .action-panel > button:hover {
+.section.orange2 > .container > .content > .action-panel > a > button:hover {
    color: white;
    background: #FFDAAD; /* orange2 4 shades lighter*/
 }

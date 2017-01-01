@@ -28,3 +28,6 @@ h3{
   font-size: 24px;
   font-weight: 400;
 }
+.title-card > h3 {
+  font-weight: 100;
+}
