@@ -1,5 +1,13 @@
+/*
+  Color Spread:
+    96C3D9 Blue 1
+    018BCE Blue 2
+    C9EDFF Blue 3
+    B0742B Orange 1
+    FFB255 Orange 2
+*/
 .section {
-  width:100%;
+  width:90%;
   height: 100vh;
   background-color: rgb(223, 186, 86);
   padding-left: 80px;
@@ -7,9 +15,24 @@
   padding-top: 70px;
   padding-bottom: 70px;
 }
+.section.blue1 {
+  background-color: #96C3D9; /* blue1 */
+}
+.section.blue2 {
+  background-color: #018BCE; /* blue2 */
+}
+.section.blue3 {
+  background-color: #C9EDFF; /* blue3 */
+}
+.section.orange1 {
+  background-color: #B0742B; /* orange1 */
+}
+.section.orange2 {
+  background-color: #FFB255; /* orange2 */
+}
 
 .section  > .container{
-  width: 100vw;
+  width: 90vw;
   position: relative;
 }
 
@@ -95,11 +118,49 @@ button {
     margin: 0;
 }
 
-button:hover {
-   color: rgb(223, 186, 86);
-   background-color: white; 
+.section.blue1 > .container > .content > .action-panel > button {
+  background-color: #96C3D9; /* blue1 */
+}
+.section.blue1 > .container > .content > .action-panel > button:hover {
+  color: white;
+  background: #D2E5EF; /* blue1 4 shades lighter*/
+}
+
+.section.blue2 > .container > .content > .action-panel > button {
+  background-color: #018BCE; /* blue2 */
+}
+.section.blue2 > .container > .content > .action-panel > button:hover {
+   color: white;
+   background: #71CFFE; /* blue2 8 shades lighter*/
+}
+
+.section.blue3 > .container > .content > .action-panel > button {
+  background-color: #C9EDFF; /* blue3 */
+}
+.section.blue3 > .container > .content > .action-panel > button:hover {
+   color: white;
+   background: #EBF8FF; /* blue3 2 shades lighter */
+}
+
+.section.orange1 > .container > .content > .action-panel > button {
+  background-color: #B0742B; /* orange1 */
+}
+.section.orange1 > .container > .content > .action-panel > button:hover {
+   color: white;
+   background: #E7C69C; /* orange1  8 shades lighter*/
+}
+
+.section.orange2 > .container > .content > .action-panel > button {
+  background-color: #FFB255; /* orange2 */
+}
+.section.orange2 > .container > .content > .action-panel > button:hover {
+   color: white;
+   background: #FFDAAD; /* orange2 4 shades lighter*/
 }
 
 .big-button {
   font-size: 24px;
 }
+
+
+
