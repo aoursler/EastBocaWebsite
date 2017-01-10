@@ -1,7 +1,13 @@
-<!--TODO: Make Medical Page
-          Make Forms Page
+<!--TODO: 
+          Make Responsive
           Write Content
-          Find and Insert Photos -->
+          Find and Insert Photos
+
+          Add dropdowns on Navbar
+
+          Indicate scroll on forms
+          NavBar Fade in
+-->
 <!DOCTYPE html>
 <html >
   <head>
@@ -9,14 +15,15 @@
     <title>East Boca Dermatology</title>
     <link rel='stylesheet' href='css/common-style.css'>
     <link rel='stylesheet' href='css/header-style.css'>
-    <!--link rel='stylesheet' href='css/rest-navbar-style.css'-->
-    <!-- TODO: Rewrite the navbar css to work either way. -->
-    <link rel='stylesheet' href='css/navbar-style.css'>
+    <link id='navBarStyle' rel='stylesheet' href='css/rest-navbar-style.css'>
     <link rel="stylesheet" href="css/section-style.css">
     <link rel="stylesheet" href="css/map-style.css">
     <link rel="stylesheet" href="css/footer-style.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,700,900' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.1.1.js" type="text/javascript"></script>
+    <script type="text/javascript"> 
+      document.getElementById('navBarStyle').setAttribute('href', 'css/navbar-style.css');
+    </script>
   </head>
 
   <body>
@@ -26,7 +33,7 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <!-- Add dropdowns for cosmetics and medical, and a \/ -->
+          <!-- TODO: Add dropdowns for cosmetics and medical, and a \/ -->
           <li><a href="cosmetics.html">Cosmetics</a></li>
           <li><a href="medical.html">Medical</a></li>
           <li><a href="forms.html">Forms</a></li>
@@ -36,6 +43,7 @@
         <div class = 'navBar-hr'></div>
       </div>
     </div>
+
     <div class = 'content-container'>
       <div class='header' id='home'>
         <div class='title-card'>
@@ -55,10 +63,12 @@
             <div class='horizontal-rule'></div>
             <h3>Judith Redd M.D.</h3>
 
-            HighSchool College Medschool Internship Residencey HighSchool College Medschool Internship Residencey HighSchool College Medschool Internship Residencey HighSchool College Medschool Internship Residencey HighSchool College Medschool Internship Residencey HighSchool College Medschool Internship Residencey HighSchool College Medschool Internship Residencey HighSchool College Medschool Internship Residencey HighSchool College Medschool Internship Residencey HighSchool College Medschool Internship Residencey HighSchool College Medschool Internship Residencey
+            &nbsp;&nbsp;&nbsp;&nbsp;Dr. Judy Redd was raised in Lighthouse Point, Florida. She graduated from Pine Crest School in 1981 and in 1985 received her B.S. magna cum laude from Davidson College in North Carolina. She completed medical school and a medical internship at Johns Hopkins University School of Medicine in Baltimore, Maryland. Following internship, she was awarded a fellowship grant to research paraneoplastic pemphigus at Johns Hopkins with Dr. Grant Anhalt. She completed her dermatology residency training at the Mayo Clinic in Rochester, Minnesota. She moved to Oregon in 1994 and practiced dermatology there until moving home to Florida in 2016.
             <br><br>
-            Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials Creddentials 
-
+            &nbsp;&nbsp;&nbsp;&nbsp;Dr. Redd is an active member of numerous professional societies including the American Academy of Dermatology and the Florida Medical Association. In southern Oregon she was active in organizing and participating in the annual free skin cancer screening programs of the American Academy of Dermatology. She also volunteered in local schools teaching children about skin protection and cancer prevention.
+            <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Dr. Redd has three grown children who live in Boston and Chicago. She enjoys many activities in beautiful south Florida including scuba diving, jogging, yoga and spending time with family and friends.
+            
             <div class='action-panel'>
               <a href="#contact-us">
                 <button type="button" class='big-button'>Contact Us</button>
@@ -75,26 +85,28 @@
           <div class='content'>
             <h2>Contact Us</h2>
             <div class='horizontal-rule'></div>
-            <h3>Integrated Dermatology of East Boca</h3>
+            <h3>Address</h3>
+            Integrated Dermatology of East Boca<br>
+            1050 NW 15th Street, Suite 201A<br>
+            Boca Raton, FL 33486<br>
+            <h3>Phone</h3>
+            (561) 368-4545<br>
+            <h3>Hours</h3>
+            Monday: 8:00 AM – 4:00 PM<br>
+            Tuesday: 8:00 AM – 4:00 PM<br>
+            Wednesday: 8:00 AM – 4:00 PM<br>
+            Thursday: 8:00 AM – 4:00 PM<br>
+            Friday: 8:00 AM – 12:00 PM<br>
+            Saturday: Closed<br>
+            Sunday: Closed
             <div class='action-panel'>
-              <!-- TODO: Make Phone number call if on moblie? or remove button-->
-              <a href="#contact-us">
-                <button type="button" class='big-button'>phone number</button>
-              </a>
-            </div>
-            address address address <br>
-            address address address <br>
-            address address address
-            <div class='action-panel'>
-              <!-- TODO: Make ZocDoc Button Redirect Properly -->
-              <a href="#contact-us">
-                <button type="button" class='big-button'>ZocDoc Button</button>
+              <a href="https://www.zocdoc.com/practice/integrated-dermatology-of-east-boca-51723">
+                <button type="button" class='big-button'> Book Online </button>
               </a>
             </div>
           </div>
         </div>
       </div>
-<!-- END -->  
 
       <div id="map-container" class="map-container">
       <iframe class="map" id='map' width="600" height="450" frameborder="0" style="border:0"
@@ -105,6 +117,23 @@
       </div>
     </div>
   <script>
+    // Change NavBar Baised on Scroll
+    // http://stackoverflow.com/questions/2481350/how-to-get-scrollbar-position-with-javascript
+    // http://www.developphp.com/video/JavaScript/Change-Style-Sheet-Using-Tutorial-CSS-Swap-Stylesheet
+    document.addEventListener("scroll", function () {
+      //apear by sliding in/fading in
+      var pixelsScrolled = document.body.scrollTop;
+      if (pixelsScrolled < 64){
+        document.getElementById('navBarStyle').setAttribute('href', 'css/navbar-style.css');
+      } else if (pixelsScrolled > 64) { 
+        stylesheet = document.getElementById('navBarStyle');
+        if (stylesheet = 'css/navbar-style.css'){ //changing to new stylesheet
+          var navBarStyleElem = document.getElementById('navBarStyle');
+          navBarStyleElem.setAttribute('href', 'css/rest-navbar-style.css');
+        }
+      }
+    });
+
     // Turn Off Map Responses
     // https://github.com/kylelam/kylelam.github.io/blob/master/iframe.html
     $(document).ready(function () {

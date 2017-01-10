@@ -1,13 +1,14 @@
 .navBar-container{
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: 1;
+  position: fixed;
 }
 .navBar {
   background-color: rgba(10, 10, 10, .85);
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .navBar > ul{
   padding: 0;

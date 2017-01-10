@@ -76,6 +76,24 @@
   border-radius: 240px;
 }
 
+.section > .container > .form-square {
+  width: 496px;
+  height: 496px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+.section.left > .container > .form-square {
+  float: right;
+}
+.section.right > .container > .form-square {
+  float: left;
+}
+.section > .container > .form-square > img {
+  width: 448px;
+  margin: 24px;
+}
+
 .action-panel{
   margin-top: 30px;
   margin-bottom: 30px;
